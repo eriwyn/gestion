@@ -1,8 +1,17 @@
+/* 
+ *Variables
+ */
+
 var currentPage = 1;
 var pageNumber = $('.pagination a').length - 2;
 var search = '';
 var orderField = 'name';
 var isDesc = false;
+
+/* 
+ *Functions 
+ */
+
 
 function initTable() {
 
@@ -79,6 +88,10 @@ function changePage() {
   $('.pagination a').removeClass("currentPage");
   $('#page' + currentPage).addClass("currentPage");
 }
+
+/* 
+ *Event Functions 
+ */
 
 function onSearchClients(e) {
   $('tbody').hide('fast', function(){
@@ -159,6 +172,10 @@ function shortcuts(e) {
   $('#page' + currentPage).addClass("currentPage");
   changePage(currentPage);
 }
+
+/*
+ * Main
+ */
 
 $(function () {
   initTable();
