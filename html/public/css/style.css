@@ -1,0 +1,456 @@
+/*
+██ ███    ███ ██████   ██████  ██████  ████████
+██ ████  ████ ██   ██ ██    ██ ██   ██    ██
+██ ██ ████ ██ ██████  ██    ██ ██████     ██
+██ ██  ██  ██ ██      ██    ██ ██   ██    ██
+██ ██      ██ ██       ██████  ██   ██    ██
+*/
+
+ @import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+/*
+ ██████  ███████ ███    ██ ███████ ██████   █████  ██
+██       ██      ████   ██ ██      ██   ██ ██   ██ ██
+██   ███ █████   ██ ██  ██ █████   ██████  ███████ ██
+██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██ ██
+ ██████  ███████ ██   ████ ███████ ██   ██ ██   ██ ███████
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
+  margin: auto;
+  background-color: white;
+  padding: 5rem;
+  max-width: 1500px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+section {
+  margin-top: 0.5rem;
+}
+
+a, button {
+  color: rgb(47,87,144);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color, 0.1s;
+}
+
+a:hover, button:hover {
+  color: #5aa1dd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+  margin: 1rem 0;
+}
+
+tr:nth-of-type(odd):not(thead tr) {
+  background-color: #FEFEFE;
+}
+
+tr:nth-of-type(even) {
+  background-color: #F5F5F5;
+}
+
+tr:hover, thead tr {
+  background-color: #E0E0E0;
+}
+
+tr {
+  transition: color, 0.1s;
+}
+
+td, th {
+  padding: 1rem;
+}
+
+.desc, .asc {
+  color: #5aa1dd;
+}
+
+.sort:not(.desc):not(.asc)::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0dc";
+  margin-left: 0.5rem;
+}
+
+.desc::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0de";
+  margin-left: 0.5rem;
+}
+
+.asc::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0dd";
+  margin-left: 0.5rem;
+}
+
+form ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+form li {
+  margin-bottom: 1rem;
+}
+
+form:not(.login) label {
+  display: inline-block;
+  width: 25rem;
+}
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+textarea, input {
+  max-width: 100%;
+}
+
+
+
+/*
+██   ██ ███████  █████  ██████  ███████ ██████
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██
+███████ █████   ███████ ██   ██ █████   ██████
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██
+██   ██ ███████ ██   ██ ██████  ███████ ██   ██
+*/
+
+header {
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.disconnect::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f011";
+  margin-right: 0.5rem;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+  border: solid 1px rgb(170,170,170);
+  background-color: white;
+  color: grey;
+}
+
+
+
+/*
+███    ███  █████  ██ ███    ██
+████  ████ ██   ██ ██ ████   ██
+██ ████ ██ ███████ ██ ██ ██  ██
+██  ██  ██ ██   ██ ██ ██  ██ ██
+██      ██ ██   ██ ██ ██   ████
+*/
+
+.photo {
+  width: 175px;
+  margin-top: 0;
+  margin: 1rem;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: -3rem;
+}
+
+.previous {
+  margin-bottom: 3rem;
+}
+
+.previous a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  margin-right: 0.5rem;
+}
+
+/* Login */
+
+.login {
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.login label {
+  display: block;
+}
+
+.login li {
+  margin-bottom: 1rem;
+}
+
+/* Liste des clients */
+
+.clientList {
+    margin: 5rem 0;
+}
+
+#searchClient {
+  width: 100%;
+}
+
+.clientList table td:not(.clientName), .clientList table th:not(.clientName) {
+  display: none;
+}
+
+.add::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f055";
+  margin-right: 0.5rem;
+  color: rgb(47,87,144);
+}
+
+.pagination {
+  text-align: center;
+}
+
+/* Détails des clients */
+
+a.modify, a.delete {
+  font-size: 1.5rem;
+}
+
+.delete, .errorMessage {
+  color: red;
+}
+
+.errorMessage {
+  font-weight: bold;
+  text-align: center;
+}
+
+.delete::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2ed";
+  margin-right: 0.5rem;
+}
+
+.modify::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f303";
+  margin-right: 0.5rem;
+  color: rgb(47,87,144);
+}
+
+/* Listes de Liens */
+
+.elementList .add {
+  float: right;
+  margin-top: -3rem;
+}
+
+.elementList div {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.elementList h1 {
+  background-color: #E0E0E0;
+  margin: 0;
+  padding: 1rem;
+}
+
+.elementList ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.elementList li a  {
+  display: block;
+  padding: 1rem;
+  background-color: #F5F5F5;;
+}
+
+.elementList li a:hover  {
+  background-color: #E0E0E0;
+}
+
+.elementList {
+  text-align: right;
+  margin: 1rem;
+}
+
+.hours, #taskMenu {
+  text-align: center;
+}
+
+#totalHours {
+  font-weight: bold;
+}
+
+#remainingHours {
+  color: red;
+}
+
+.endedTask::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  margin-left: 0.5rem;
+}
+
+.pausedTask::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04c";
+  margin-left: 0.5rem;
+}
+
+.pendingTask::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f110";
+  margin-left: 0.5rem;
+}
+
+.pause::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04c";
+  margin-right: 0.5rem;
+}
+
+.play::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04b";
+  margin-right: 0.5rem;
+}
+
+.end::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04d";
+  margin-right: 0.5rem;
+}
+
+#purchaseDetail {
+  display: inline-block;
+  width: 67%;
+}
+
+.pagination a {
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination .currentPage {
+  color: #5aa1dd;
+}
+
+/*
+██████  ███████ ███████ ██   ██ ████████  ██████  ██████
+██   ██ ██      ██      ██  ██     ██    ██    ██ ██   ██
+██   ██ █████   ███████ █████      ██    ██    ██ ██████
+██   ██ ██           ██ ██  ██     ██    ██    ██ ██
+██████  ███████ ███████ ██   ██    ██     ██████  ██
+*/
+
+@media screen and (min-width: 800px) {
+  html {
+    background-image: linear-gradient(rgb(230,230,230) 30% , rgb(255,255,255) 50%);
+    background-attachment: fixed;
+    height: 100%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  body {
+    min-height: 100%;
+    width: 85%;
+    box-shadow: 5px 0 5px -4px rgba(200, 200, 200, 0.8), -5px 0 5px -4px rgba(200, 200, 200, 0.8);
+  }
+
+  .photo {
+    float: left;
+  }
+
+  .clientList .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .sort {
+    margin: 0;
+  }
+
+  #searchClient {
+    width: 30rem;
+  }
+
+  .clientList table td:not(.clientName), .clientList table th:not(.clientName) {
+    display: table-cell;
+  }
+
+
+  .elementList{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .elementList {
+    width: calc(33% - 2rem);
+  }
+
+  .pagination {
+    position: absolute;
+    top: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+}
